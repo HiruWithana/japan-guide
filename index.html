@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+        integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- nav bar -->
+    <header class="relative z-50 w-full flex-none text-sm/6 font-semibold text-slate-900 py-4 h-10">
+        <nav class="max-w-7xl mx-auto">
+            <div class="relative flex items-center justify-between px-4 md:px-0">
+
+                <!-- logo -->
+                <a class="" href="/">
+                    <span class="sr-only">Logo</span>
+                    <h2 class="text-xl font-bold ">Japan-Guide</h2>
+                </a>
+
+                <!-- button -->
+                <a href=""
+                    class="group ml-6 hidden sm:flex lg:hidden xl:flex items-center gap-2 rounded-full bg-white/25 px-3 py-2 text-xs text-slate-900 ring-1 ring-black/[0.08] hover:bg-white/50 hover:ring-black/[0.13]">
+                    <!-- ai icon -->
+                    <svg class="size-4 fill-sky-500" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+
+                    <span class="font-semibold">2025 World Expo opens in Osaka</span>
+
+                    <svg width="2" height="2" class="fill-slate-900">
+                        <circle cx="1" cy="1" r="1"></circle>
+                    </svg>
+
+                    <span class="font-medium"><span>Learn more</span></span>
+
+                    <svg viewBox="0 0 5 8" class="h-2 w-[5px] fill-black/30 group-hover:fill-black/60"
+                        fill-rule="evenodd" clip-rule="evenodd">
+                        <path
+                            d="M.2.24A.75.75 0 0 1 1.26.2l3.5 3.25a.75.75 0 0 1 0 1.1L1.26 7.8A.75.75 0 0 1 .24 6.7L3.148 4 .24 1.3A.75.75 0 0 1 .2.24Z">
+                        </path>
+                    </svg>
+
+                </a>
+
+                <!-- menu content -->
+                <div class="ml-auto hidden lg:flex items-center">
+                    <a class="text-white" href="/components">Destinations</a>
+                    <a class="ml-8 text-white" href="/templates">Travel Tips</a>
+                    <a class="ml-8 text-white" href="/templates/catalyst">Food Guide</a>
+                    <a class="ml-8 text-white" href="/documentation">Gift Shops</a>
+                </div>
+
+                <!-- nav icon -->
+                <button type="button" class="-my-1 -mr-1 ml-6 flex size-8 items-center justify-center lg:hidden"
+                    onclick="handleMenu()">
+                    <i class="fa-solid fa-bars text-gray-600"></i>
+                </button>
+
+                <!-- Button Group -->
+                <div class="hidden lg:ml-8 lg:flex lg:items-center lg:border-l lg:border-white lg:pl-8">
+                    <!-- sign in -->
+                    <a href="/login" class="text-white">About Us</a>
+                    <!-- sign up -->
+                    <a class="inline-flex justify-center rounded-full text-sm font-semibold py-2.5 px-4 bg-slate-900 text-white hover:bg-slate-700 -my-2.5 ml-8"
+                        href="/all-access">
+                        <span>
+                            Contact Now
+                            <span aria-hidden="true">→</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- mobile nav content -->
+                <div id="nav-dialog" class="hidden py-4 fixed z-10 lg:hidden bg-white inset-0">
+
+                    <!-- header -->
+                    <div class="flex items-center justify-between px-4 md:px-6">
+
+                        <!-- logo -->
+                        <a class="" href="/">
+                            <span class="sr-only">Logo</span>
+                            <h2 class="text-xl font-bold ">Japan-Guide</h2>
+                        </a>
+
+                        <!-- close button icon -->
+                        <button type="button" class="-my-1 -mr-1 ml-6 flex size-8 items-center justify-center lg:hidden"
+                            onclick="handleMenu()">
+                            <i class="fa-solid fa-xmark text-gray-600"></i>
+                        </button>
+
+
+                    </div>
+
+                    <!-- content -->
+                    <div class="flex flex-col gap-5 pt-12 pb-5 border-b border-slate-900/15">
+                        <a class="ml-8 text-lg" href="/components">Destinations</a>
+                        <a class="ml-8 text-lg" href="/templates">Travel Tips</a>
+                        <a class="ml-8 text-lg" href="/templates/catalyst">Food Guide</a>
+                        <a class="ml-8 text-lg" href="/documentation">Gift Shops</a>
+                        <a class="ml-8 text-lg md:hidden" href="/documentation">About Us</a>
+                    </div>
+
+                    <div class="flex py-5 px-4">
+                        <button class="bg-gray-900 text-white rounded-full py-2.5 px-8 text-center font-semibold">
+                            <span>Contact Now</span>
+                            <i class="fa-solid fa-arrow-right ml-3"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- blog swiper -->
+    <section class="mx-auto relative -mt-10 h-[75vh]">
+        <!-- swiper -->
+        <div class="swiper imageSliderHome h-full">
+            <!-- wrapper -->
+            <div class="swiper-wrapper">
+
+                <!-- single slide -->
+                <div class="swiper-slide relative">
+                    <!-- dark bottom mask -->
+                    <div
+                        class="absolute inset-0 z-0 bg-gradient-to-t from-black/50 via-black/30 to-transparent pointer-events-none">
+                    </div>
+
+                    <!-- main image -->
+                    <img src="assets/images/mainSlider/slide1.jpg"
+                        class="-z-10 absolute inset-0 w-full h-full object-cover" alt="">
+
+                    <!-- card -->
+                    <div class="max-w-7xl mx-auto h-full relative z-10">
+                        <div class="absolute bottom-0 px-4 md:px-0 pb-20 md:py-10">
+                            <!-- sub title -->
+                            <h6 class="text-white text-lg md:text-xl font-bold mb-2">Cherry Blossoms 2025</h6>
+                            <!-- main title -->
+                            <h5 class="text-white text-3xl md:text-5xl font-bold">Aizu: Approaching Full Bloom</h5>
+                            <!-- meta data -->
+                            <div class="flex items-center gap-4 mt-4 md:mt-10">
+                                <!-- when the post was published -->
+                                <div class="flex gap-1 items-center">
+                                    <i class="fa-regular fa-clock text-white mt-1"></i>
+                                    <p class="text-white text-md">Yesterday</p>
+                                </div>
+                                <!-- read more button -->
+                                <a href="#"
+                                    class="bg-transparent text-white font-bold border border-slate-100 rounded-full px-5 py-2 hover:bg-white hover:text-slate-900 transition-all duration-150 ease-in">
+                                    See our Report
+                                    <i class="fa-solid fa-chevron-right text-sm ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- single slide -->
+                <div class="swiper-slide relative">
+                    <!-- dark bottom mask -->
+                    <div
+                        class="absolute inset-0 z-0 bg-gradient-to-t from-black/50 via-black/30 to-transparent pointer-events-none">
+                    </div>
+
+                    <!-- main image -->
+                    <img src="assets/images/mainSlider/slide2.jpg"
+                        class="-z-10 absolute inset-0 w-full h-full object-cover" alt="">
+
+                    <!-- card -->
+                    <div class="max-w-7xl mx-auto h-full relative z-10">
+                        <div class="absolute bottom-0 px-4 md:px-0 pb-20 md:py-10">
+                            <!-- sub title -->
+                            <h6 class="text-white text-lg md:text-xl font-bold mb-2">Must visits in Japan</h6>
+                            <!-- main title -->
+                            <h5 class="text-white text-3xl md:text-5xl font-bold">Mount Fuji Classic Tour</h5>
+                            <!-- meta data -->
+                            <div class="flex items-center gap-4 mt-4 md:mt-10">
+                                <!-- when the post was published -->
+                                <div class="flex gap-1 items-center">
+                                    <i class="fa-regular fa-clock text-white mt-1"></i>
+                                    <p class="text-white text-md">2 days ago</p>
+                                </div>
+                                <!-- read more button -->
+                                <a href="#"
+                                    class="bg-transparent text-white font-bold border border-slate-100 rounded-full px-5 py-2 hover:bg-white hover:text-slate-900 transition-all duration-150 ease-in">
+                                    See our Report
+                                    <i class="fa-solid fa-chevron-right text-sm ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Custom navigation buttons -->
+        <div class="absolute bottom-0 right-0 z-10 flex gap-4 p-4">
+            <button
+                class="swiper-button-prev-custom group w-10 h-10 flex justify-center items-center border rounded-full border-white hover:bg-white">
+                <i class="fa-solid fa-arrow-left text-white group-hover:text-slate-900"></i>
+            </button>
+
+            <button
+                class="swiper-button-next-custom group w-10 h-10 flex justify-center items-center border rounded-full border-white hover:bg-white">
+                <i class="fa-solid fa-arrow-right text-white group-hover:text-slate-900"></i>
+            </button>
+        </div>
+    </section>
+
+
+    <!-- features section -->
+    <section class="max-w-7xl mx-auto py-20 px-4 md:px-0">
+
+
+        <!-- featured title -->
+        <h1 class="text-4xl font-bold border-b border-slate-200 pb-4 mb-8 md:mask-r-from-10%">Featured Section</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 space-y-4 md:space-y-0">
+
+            <!-- featured card 1 -->
+            <div class="bg-slate-100 relative rounded-md">
+                <a href="#">
+                    <!-- header -->
+                    <div class="p-6 pb-4">
+
+                        <h2 class="text-2xl md:text-2xl font-bold mb-4 greatTitle">
+                            Top 10 Destinations you should visit in Japan
+                        </h2>
+
+                        <p class="line-clamp-2">
+                            Step into a world where delicate sakura petals float through centuries-old temple grounds.
+                            This spring itinerary through Kyoto blends timeless traditions, tranquil gardens, and
+                            must-visit cultural gems for an unforgettable Japan experience.
+                        </p>
+
+                        <!-- tags -->
+                        <div class="flex mt-3">
+                            <a href="#" class="text-xs font-bold px-2 py-1 bg-white rounded shadow">Featured</a>
+                        </div>
+
+                    </div>
+
+                    <!-- Footer container-->
+                    <div class="ralative">
+
+                        <!-- footer image -->
+                        <img src="assets/images/blogImg/blog1.jpg" class="rounded-b-md" alt="" />
+                        <!-- footer -->
+                        <div
+                            class="absolute p-2 mx-6 rounded-full bottom-5 backdrop-blur-sm bg-white/30 hover:bg-white/40 transition-all duration-300 ease-in-out group">
+                            <a href="#" class="pl-2 flex items-center gap-4">
+                                <p class="text-white">Read More</p>
+                                <div
+                                    class="bg-white h-8 w-8 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 ease-in-out">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+                </a>
+            </div>
+
+            <!-- featured card 2 -->
+            <div class="bg-slate-100 relative rounded-md">
+                <a href="#">
+                    <!-- header -->
+                    <div class="p-6 pb-4">
+
+                        <h2 class="text-2xl md:text-2xl font-bold mb-4 greatTitle">
+                            A Tokyo Travel Guide including Easy Day Trips
+                        </h2>
+
+                        <p class="line-clamp-2">
+                            Discover the electric energy of Tokyo's bustling districts before unwinding in nature’s
+                            embrace near Mount Fuji. This 5-day guide takes you from city lights to serene heights with
+                            ease and style.
+                        </p>
+
+                        <!-- tags -->
+                        <div class="flex mt-3">
+                            <a href="#" class="text-xs font-bold px-2 py-1 bg-white rounded shadow">Featured</a>
+                        </div>
+
+                    </div>
+
+                    <!-- Footer container-->
+                    <div class="ralative">
+
+                        <!-- footer image -->
+                        <img src="assets/images/blogImg/blog2.jpg" class="rounded-b-md" alt="" />
+                        <!-- footer -->
+                        <div
+                            class="absolute p-2 mx-6 rounded-full bottom-5 backdrop-blur-sm bg-white/30 hover:bg-white/40 transition-all duration-300 ease-in-out group">
+                            <a href="#" class="pl-2 flex items-center gap-4">
+                                <p class="text-white">Read More</p>
+                                <div
+                                    class="bg-white h-8 w-8 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 ease-in-out">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+                </a>
+            </div>
+
+            <!-- featured card 3 -->
+            <div class="bg-slate-100 relative rounded-md">
+                <a href="#">
+                    <!-- header -->
+                    <div class="p-6 pb-4">
+
+                        <h2 class="text-2xl md:text-2xl font-bold mb-4 greatTitle">
+                            A Culinary Adventure from Osaka to Hokkaido
+                        </h2>
+
+                        <p class="line-clamp-2">
+                            Embark on a flavor-packed journey through Japan’s culinary heartlands. From Osaka’s street
+                            food stalls to Hokkaido’s seafood markets, this guide is a feast for both your taste buds
+                            and your travel soul.
+                        </p>
+
+                        <!-- tags -->
+                        <div class="flex mt-3">
+                            <a href="#" class="text-xs font-bold px-2 py-1 bg-white rounded shadow">Featured</a>
+                        </div>
+
+                    </div>
+
+                    <!-- Footer container-->
+                    <div class="ralative">
+
+                        <!-- footer image -->
+                        <img src="assets/images/blogImg/blog3.jpg" class="rounded-b-md" alt="" />
+                        <!-- footer -->
+                        <div
+                            class="absolute p-2 mx-6 rounded-full bottom-5 backdrop-blur-sm bg-white/30 hover:bg-white/40 transition-all duration-300 ease-in-out group">
+                            <a href="#" class="pl-2 flex items-center gap-4">
+                                <p class="text-white">Read More</p>
+                                <div
+                                    class="bg-white h-8 w-8 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 ease-in-out">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- blog section -->
+    <section class="max-w-7xl mx-auto px-4 md:px-0">
+
+        <!-- featured title -->
+        <h1 class="text-4xl font-bold border-b border-slate-200 pb-4 md:mask-r-from-10%">Latest News</h1>
+
+
+        <div class="w-full flex flex-col md:flex-row justify-between gap-10">
+
+            <div class="h-full md:w-2/3">
+
+                <!-- single blog card -->
+                <div class="flex md:gap-4 justify-between border-b border-slate-200 py-6">
+                    <!-- left side | blog title and info -->
+                    <div class="w-2/3 md:pr-20">
+
+                        <h2 class="text-lg md:text-2xl font-bold leading-tight">Cherry Blossoms and Ancient Temples in
+                            Kyoto
+                        </h2>
+                        <p class="mt-2 hidden md:block">Step into a world where delicate sakura petals float through
+                            centuries-old
+                            temple
+                            grounds.</p>
+
+                        <!-- tags -->
+                        <div class="flex gap-4 mt-3">
+                            <a href="#" class="text-xs font-bold px-2 py-1 bg-white rounded shadow">Food</a>
+                        </div>
+
+                    </div>
+
+                    <!-- right side | blog image -->
+                    <div class="w-1/3">
+                        <img src="assets/images/blogImg/blog4.jpg" class="rounded-md w-full" alt="">
+                    </div>
+                </div>
+
+                <!-- single blog card -->
+                <div class="flex md:gap-4 justify-between border-b border-slate-200 py-6">
+                    <!-- left side | blog title and info -->
+                    <div class="w-2/3 md:pr-20">
+
+                        <h2 class="text-lg md:text-2xl font-bold leading-tight">Experience the Magic of Spring Blossoms
+                            Across Kyoto
+                            and Nara</h2>
+                        <p class="mt-2 hidden md:block">Discover the electric energy of Tokyo’s bustling districts
+                            before unwinding in nature’s embrace near Mount Fuji. This 5-day guide takes you from city
+                            lights to serene heights with ease and style.</p>
+
+                        <!-- tags -->
+                        <div class="flex gap-4 mt-3">
+                            <a href="#" class="text-xs font-bold px-2 py-1 bg-white rounded shadow">Kyoto</a>
+                            <a href="#" class="text-xs font-bold px-2 py-1 bg-white rounded shadow">Destination</a>
+                        </div>
+
+                    </div>
+
+                    <!-- right side | blog image -->
+                    <div class="w-1/3">
+                        <img src="assets/images/blogImg/blog5.jpg" class="rounded-md w-full" alt="">
+                    </div>
+                </div>
+
+                <!-- single blog card -->
+                <div class="flex md:gap-4 justify-between border-b border-slate-200 py-6">
+                    <!-- left side | blog title and info -->
+                    <div class="w-2/3 md:pr-20">
+
+                        <h2 class="text-lg md:text-2xl font-bold leading-tight">Wandering Through the Streets of Old
+                            Tokyo</h2>
+                        <p class="mt-2 hidden md:block">Discover the charm of Tokyo’s historic neighborhoods, where
+                            narrow alleyways, traditional teahouses, and quiet shrines offer a peaceful escape from the
+                            city’s high-tech hustle.</p>
+
+                        <!-- tags -->
+                        <div class="flex gap-4 mt-3">
+                            <a href="#" class="text-xs font-bold px-2 py-1 bg-white rounded shadow">Tokyo</a>
+                            <a href="#" class="text-xs font-bold px-2 py-1 bg-white rounded shadow">Destination</a>
+                        </div>
+
+                    </div>
+
+                    <!-- right side | blog image -->
+                    <div class="w-1/3">
+                        <img src="assets/images/blogImg/blog6.jpg" class="rounded-md w-full" alt="">
+                    </div>
+                </div>
+
+                <!-- single blog card -->
+                <div class="flex md:gap-4 justify-between border-b border-slate-200 py-6">
+                    <!-- left side | blog title and info -->
+                    <div class="w-2/3 md:pr-20">
+
+                        <h2 class="text-lg md:text-2xl font-bold leading-tight">Charming Coastal Towns to Explore on
+                            Your Japan
+                            Adventure</h2>
+                        <p class="mt-2 hidden md:block">Escape the crowds and unwind in scenic seaside towns filled with
+                            fresh seafood, friendly locals, and breathtaking ocean views.</p>
+
+                        <!-- tags -->
+                        <div class="flex gap-4 mt-3">
+                            <a href="#" class="text-xs font-bold px-2 py-1 bg-white rounded shadow">Tokyo</a>
+                            <a href="#" class="text-xs font-bold px-2 py-1 bg-white rounded shadow">Destination</a>
+                        </div>
+
+                    </div>
+
+                    <!-- right side | blog image -->
+                    <div class="w-1/3">
+                        <img src="assets/images/blogImg/blog7.jpg" class="rounded-md w-full" alt="">
+                    </div>
+                </div>
+
+
+
+                <div class="py-6 mt-8 flex">
+                    <a href="#"
+                        class="border border-slate-300 px-8 py-4 flex items-center gap-2 hover:bg-slate-900 hover:text-white transition-all duration-300 ease-in-out">
+                        <span>Load More Blogs</span>
+                        <i class="fa-solid fa-chevron-right text-sm ml-2"></i>
+                    </a>
+                </div>
+
+
+
+            </div>
+
+
+            <div class="h-full md:w-1/3">
+
+                <!-- float card -->
+                <div class="bg-blue-200 rounded pb-2 mt-6">
+
+                    <div class="flex justify-center">
+                        <img src="assets/images/fortuneKoi.png" class="w-32 -mt-16" alt="">
+                    </div>
+
+                    <div class="px-4 pb-4">
+                        <h6 class="text-2xl font-bold text-center font-playFair">
+                            Take a Piece of Japan Home With You
+                        </h6>
+
+                        <h6 class="text-sm text-center mt-3 mb-8">
+                            No trip to Japan is complete without exploring its delightful gift shops, where tradition,
+                            craftsmanship, and creativity come together in every item.
+                        </h6>
+                        <!-- CAT button -->
+                        <div class="flex justify-center">
+                            <a href="#"
+                                class="bg-slate-900 text-white border border-slate-900 px-8 py-4 flex items-center gap-2 hover:bg-white hover:text-slate-900 transition-all duration-300 ease-in-out">
+                                <span>View Gift Shops</span>
+                                <i class="fa-solid fa-chevron-right text-sm ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- banner section -->
+    <div class="bg-cover bg-center mt-28 bg-[url('assets/images/footerBanner.jpg')]">
+
+        <div class="min-h-[75vh] flex justify-end items-center px-10 md:px-20">
+
+            <div class="max-w-sm p-5 md:p-10 bg-white">
+                <!-- title -->
+                <h3 class="text-4xl font-bold font-playFair text-start mb-4">Uncover Japan Like Never Before</h3>
+
+                <!-- single list of data -->
+                <p class="mb-10 text-sm">
+                    Welcome to Wander Japan, your go-to travel blog for everything Japan. From the neon-lit streets of
+                    Tokyo to the quiet temples of Kyoto, we bring you firsthand experiences, local tips, and cultural
+                    insights.
+                </p>
+
+
+
+                <!-- CAT button -->
+                <div class="flex">
+
+                    <a href="{{ url('/stories') }}" class="w-full bg-slate-900 py-3 text-center font-bold text-white">
+                        Read Stories
+                    </a>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
+    <footer class="bg-slate-900 text-white p-8 md:p-12 md:pb-4">
+        <!-- grid -->
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <!-- logo -->
+                <a class="" href="/">
+                    <span class="sr-only">Logo</span>
+                    <h2 class="text-2xl font-bold ">Japan-Guide</h2>
+                </a>
+
+                <p class="mt-2 mb-4 text-sm">
+                    Exploring Japan. Discover authentic moments, timeless traditions, and unforgettable
+                    journeys.
+                </p>
+
+                <div class="flex gap-4 mt-8">
+                    <i class="fa-brands fa-facebook-f text-xl"></i>
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                    <i class="fa-brands fa-tiktok text-xl"></i>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl mb-4 main-font greatTitle">Company</h3>
+                <ul class="space-y-1">
+                    <li><a href="#" class="text-sm">Home</a></li>
+                    <li><a href="#" class="text-sm">About Us</a></li>
+                    <li><a href="#" class="text-sm">FAQ</a></li>
+                    <li><a href="#" class="text-sm">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Stories -->
+            <div>
+                <h3 class="text-xl mb-4 main-font greatTitle">Stories</h3>
+                <ul class="space-y-1">
+                    <li><a href="#" class="text-sm">Destinations</a></li>
+                    <li><a href="#" class="text-sm">Food Guide</a></li>
+                    <li><a href="#" class="text-sm">Gift Shops</a></li>
+                </ul>
+            </div>
+
+            <!-- Privacy Policy -->
+            <div>
+                <h3 class="text-xl mb-4 main-font greatTitle">Support</h3>
+                <ul class="space-y-1">
+                    <li><a href="#" class="text-sm">FAQ</a></li>
+                    <li><a href="#" class="text-sm">Terms & Conditions</a></li>
+                    <li><a href="#" class="text-sm">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Credit -->
+        <div
+            class="max-w-6xl mx-auto md:flex justify-between mt-40 md:mt-44 space-y-2 md:space-y-0 border-t border-slate-50/20 pt-8">
+            <h6>© 2025 Mayura Bakers | All Rights Reserved.</h6>
+            <h6>Designed with ❤️ by Hiru Withana</h6>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <script>
+        const navDialog = document.getElementById('nav-dialog');
+        function handleMenu() {
+            navDialog.classList.toggle('hidden');
+        }
+    </script>
+
+    <script src="swiper.js"></script>
+
+</body>
+
+</html>
